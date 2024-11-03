@@ -32,7 +32,7 @@ class CreateAdminUserSeeder extends Seeder
 
         $user = User::create([
 
-        	'name' => 'Hardik Savani', 
+        	'name' => 'Super Admin', 
 
         	'email' => 'admin@gmail.com',
 
@@ -42,7 +42,7 @@ class CreateAdminUserSeeder extends Seeder
 
   
 
-        $role = Role::create(['name' => 'Admin']);
+        $role = Role::create(['name' => 'Super Admin']);
 
    
 

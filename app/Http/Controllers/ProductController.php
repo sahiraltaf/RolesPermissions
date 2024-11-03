@@ -75,6 +75,8 @@ class ProductController extends Controller
             'detail' => 'required',
         ]);
         Product::create($request->all());
+        // toastr()->success('Product has been added successfully!');
+        
         return redirect()->route('products.index')->with('success','Product created successfully.');
     }
 
@@ -139,7 +141,7 @@ class ProductController extends Controller
             'detail' => 'required',
         ]);
         $product->update($request->all());
-        return redirect()->route('products.index')->with('success','Product updated successfully');
+        return redirect()->route('products.index')->with('info','Product updated successfully');
 
     }
 
@@ -160,6 +162,7 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         $product->delete();
+        // toastr()->success('Data has been deleted successfully!');
         return redirect()->route('products.index')->with('success','Product deleted successfully');
 
     }

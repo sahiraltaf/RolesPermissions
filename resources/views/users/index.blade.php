@@ -15,7 +15,7 @@
         </div>
 
         <div class="pull-right">
-        @can('user-create')
+        @can('user-add')
             <a class="btn btn-success" href="{{ route('users.create') }}"> Create New User</a>
         @endcan
         </div>
@@ -81,7 +81,7 @@
     </td>
 
     <td>
-       @can('user-list') 
+       @can('user-list')
        <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a>
        @endcan
        @can('user-edit')
@@ -108,6 +108,5 @@
 
 
 
-<p class="text-center text-primary"><small>Tutorial by ItSolutionStuff.com</small></p>
 
 @endsection

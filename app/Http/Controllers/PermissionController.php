@@ -53,13 +53,13 @@ class PermissionController extends Controller
 
         $permissions = Permission::latest()->paginate(5);
         // dd($permissions);
-        // if(Auth::user()->roles()->pluck('name') === "Admin"){
-           
+        if(Auth::user()->roles()->pluck('name')[0] === "Super Admin"){
+            // dd(Auth::user()->roles()->pluck('name')[0]);
             return view('permissions.index',compact('permissions'))->with('i', (request()->input('page', 1) - 1) * 5);
-        // }
-        // else{
-        //     return abort(404);
-        // }
+        }
+        else{
+             return response()->json(['User have not permission for this page access.']);
+        }
         
     }
 

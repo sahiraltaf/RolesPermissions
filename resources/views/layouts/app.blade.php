@@ -23,6 +23,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+
 </head>
 <body>
     <div id="app">
@@ -33,7 +34,7 @@
                 </a>
            
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left:890px; margin-bottom:0px;">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left:890px;">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
@@ -45,7 +46,7 @@
                         @guest
                          
                         @else
-                            <div class="nav-item dropdown" >
+                            <div class="nav-item dropdown" style=" margin-top:13px;">
                                 <a id="navbarDropdown" class="nav-link btn btn-primary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ strtoupper(Auth::user()->name) }}
                                 </a>
@@ -72,5 +73,6 @@
             @yield('content')
         </main>
     </div>
+
 </body>
 </html>
