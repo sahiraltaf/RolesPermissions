@@ -41,10 +41,10 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
+                  
                     <div class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                         
                         @else
                             <div class="nav-item dropdown" style=" margin-top:13px;">
                                 <a id="navbarDropdown" class="nav-link btn btn-primary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -63,8 +63,10 @@
                                     </form>
                                 </div>
                             </div>
+                        
                         @endguest
                 </div>
+             
                 </div>
             </div>
         </nav>
@@ -73,6 +75,6 @@
             @yield('content')
         </main>
     </div>
-
+    @yield('script')
 </body>
 </html>
